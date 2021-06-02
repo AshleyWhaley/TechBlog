@@ -48,7 +48,7 @@ WHEN I am idle on the page for more than a set time
 THEN I am automatically signed out of the site
 ```
 ## Link to Deployed Application 
-https://sleepy-retreat-87083.herokuapp.com/ 
+https://damp-beyond-61358.herokuapp.com/
 
 ### Author 
 **Ashley Whaley** [Github](https://github.com/AshleyWhaley)
