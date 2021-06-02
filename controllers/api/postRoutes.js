@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth');
 //Create post
 router.post('/', withAuth, async (req, res) => {
     try {
-        const postData = await Post.create ({
+        const postData = await Post.create({
         ...req.body,
         user_id: req.session.user_id,
         });
@@ -18,10 +18,11 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
+
 //Update post
 router.put('/:id', withAuth, async (req, res) => {
     try {
-        const postData = await Post.update ({
+        const postData = await Post.update({
             title: req.body.title,
             content: req.body.content,
         },
@@ -41,7 +42,7 @@ router.put('/:id', withAuth, async (req, res) => {
 //Delete  post
 router.delete('/:id', withAuth, async (req, res) => {
     try {
-        await Post.destroy ({
+        await Post.destroy({
             where: {
                 id: req.params.id,
                 user_id: req.session.user_id,

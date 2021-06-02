@@ -1,7 +1,10 @@
+//Import dependencies
 const router = require('express').Router();
 const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+
+//Show all posts on homepage
 router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
@@ -24,7 +27,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-
+//Single page view with comments
 router.get('/post/:id', async (req, res) => {
     try {
         const postData = await Post.findOne({
@@ -58,7 +61,7 @@ router.get('/post/:id', async (req, res) => {
     }
 });
 
-
+//Dashboard view for logged_in User
 router.get('/dashboard', withAuth, async (req, res) => {
     try {
         // Find the logged in user based on the session ID
@@ -78,7 +81,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
     }
 });
 
-
+//Login page
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/dashboard');
