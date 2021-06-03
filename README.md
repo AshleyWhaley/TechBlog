@@ -48,7 +48,7 @@ WHEN I am idle on the page for more than a set time
 THEN I am automatically signed out of the site
 ```
 ## Link to Deployed Application 
-https://damp-beyond-61358.herokuapp.com/
+[Tech Blog](https://damp-beyond-61358.herokuapp.com/)
 
 ### Author 
 **Ashley Whaley** [Github](https://github.com/AshleyWhaley)
